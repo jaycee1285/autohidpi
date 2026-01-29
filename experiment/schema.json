@@ -1,0 +1,39 @@
+[
+  {
+    "namespace": "prefs",
+    "description": "Access Firefox preferences",
+    "functions": [
+      {
+        "name": "get",
+        "type": "function",
+        "description": "Get a preference value",
+        "async": true,
+        "parameters": [
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Preference name"
+          }
+        ]
+      },
+      {
+        "name": "set",
+        "type": "function",
+        "description": "Set a preference value",
+        "async": true,
+        "parameters": [
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Preference name"
+          },
+          {
+            "name": "value",
+            "type": "string",
+            "description": "Preference value"
+          }
+        ]
+      }
+    ]
+  }
+]

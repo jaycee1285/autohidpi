@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "AutoHiDPI",
+  "version": "4.0.0",
+  "description": "Set a different pixel ratio (layout.css.devPixelsPerPx) for each of your screens",
+  "author": "Ertug Karamatli",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "jid1-ylDsmQrKspNYVg@jetpack",
+      "strict_min_version": "109.0"
+    }
+  },
+
+  "permissions": [
+    "storage",
+    "nativeMessaging"
+  ],
+
+  "experiment_apis": {
+    "prefs": {
+      "schema": "experiment/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["prefs"]],
+        "script": "experiment/api.js"
+      }
+    }
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "24": "data/ic_desktop_windows_black_24dp_1x.png",
+      "48": "data/ic_desktop_windows_black_24dp_2x.png"
+    },
+    "default_popup": "data/panel.html",
+    "default_title": "AutoHiDPI",
+    "browser_style": false
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "autohidpi",
+  "description": "AutoHiDPI native messaging host",
+  "path": "/home/john/repos/config/autohidpi/native/autohidpi-host.js",
+  "type": "stdio",
+  "allowed_extensions": ["jid1-ylDsmQrKspNYVg@jetpack"]
+}

@@ -1,22 +1,96 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <style type="text/css" media="all">
-     body {
-       background-color: #DDD;
-     }
+    <meta charset="utf-8">
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #2b2b2b;
+        color: #e0e0e0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        margin: 0;
+        padding: 12px;
+        min-width: 320px;
+      }
+      h1 {
+        font-size: 16px;
+        margin: 0 0 12px 0;
+        color: #fff;
+      }
+      .error {
+        background: #5c2b2b;
+        padding: 10px;
+        border-radius: 4px;
+        color: #ffaaaa;
+      }
+      .display-card {
+        background-color: #3a3a3a;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 10px;
+      }
+      .display-card:last-child {
+        margin-bottom: 0;
+      }
+      .display-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+      }
+      .display-name {
+        font-weight: bold;
+        color: #fff;
+      }
+      .display-info {
+        font-size: 11px;
+        color: #999;
+        margin-bottom: 10px;
+      }
+      .control-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .pixel-ratio-display {
+        min-width: 45px;
+        font-weight: bold;
+        color: #7cb7ff;
+      }
+      input[type="range"] {
+        flex: 1;
+        accent-color: #7cb7ff;
+      }
+      .apply-btn {
+        background: #4a7c4a;
+        border: none;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      .apply-btn:hover {
+        background: #5a9c5a;
+      }
+      .apply-btn.active {
+        background: #7cb7ff;
+        color: #000;
+      }
+      #loading {
+        color: #999;
+        text-align: center;
+        padding: 20px;
+      }
     </style>
   </head>
   <body>
     <h1>AutoHiDPI</h1>
-    You can set a different pixel ratio for each of your screens.
-
-    <h2>Current Screen Geometry</h2>
-    <span id="geometry"></span>
-    <h2>Pixel Ratio</h2>
-    <div style="background-color: #FFF;">
-      <div id="pixelRatioDisplay" style="width: 60px; margin: 5px 15px; float: left;"></div>
-      <div style="padding: 5px; float: left;"><input type="range" id="pixelRatio" min="0.75" max="3" step="0.25" style="width: 150px;" /></div>
-      <div style="clear: both;"></div>
-    </div>
+    <div id="loading">Loading displays...</div>
+    <div id="displays"></div>
+    <script src="panel.js"></script>
   </body>
 </html>
